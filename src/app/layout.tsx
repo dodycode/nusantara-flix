@@ -12,27 +12,38 @@ import { TRPCReactProvider } from "@/trpc/react";
 export const metadata: Metadata = {
   metadataBase: new URL(
     env.NODE_ENV === "production"
-      ? "https://your-website.vercel.app"
+      ? "https://nusantara-flix.vercel.app"
       : "http://localhost:3000",
   ),
-  title: "Dodycode NextJS Boilerplate",
+  title: "Nusantara Flix",
   description:
-    "Production ready NextJS Boilerplate with tRPC and Repository Pattern",
+    "Nusantara Flix is your premier destination for exploring the best of Indonesian cinema and television. Discover popular movies and TV series featuring renowned Indonesian actors and actresses.",
+  keywords:
+    "Indonesian movies, Indonesian TV series, Nusantara Flix, Popular Indonesian actors, Indonesian actresses, Explore Indonesian films, Indonesian entertainment, T3 stack app",
+  authors: [
+    {
+      name: "Dodycode",
+      url: "https://dodycode.com",
+    },
+  ],
   openGraph: {
-    title: "Dodycode NextJS Boilerplate",
+    title: "Nusantara Flix",
     description:
-      "Production ready NextJS Boilerplate with tRPC and Repository Pattern",
+      "Explore the best of Indonesian cinema and television with Nusantara Flix. Discover popular movies and TV series featuring your favorite actors and actresses.",
     url: new URL(
       env.NODE_ENV === "production"
-        ? "https://your-website.vercel.app"
+        ? "https://nusantara-flix.vercel.app"
         : "http://localhost:3000",
     ),
-    siteName: "Dodycode NextJS Boilerplate",
+    siteName: "Nusantara Flix",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@dodypras__",
+    title: "Nusantara Flix",
+    description:
+      "Explore the best of Indonesian cinema and television with Nusantara Flix. Discover popular movies and TV series featuring your favorite actors and actresses.",
     creator: "@dodypras__",
+    site: "@dodypras__",
   },
 };
 
