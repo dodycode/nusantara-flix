@@ -1,6 +1,7 @@
 import type { LucideProps } from "lucide-react";
 import type { ForwardRefExoticComponent, RefAttributes } from "react";
 import {
+  CirclePlayIcon,
   FileQuestionIcon,
   FileTextIcon,
   GalleryHorizontalEndIcon,
@@ -8,10 +9,13 @@ import {
   XIcon,
 } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-
+import { FacebookIcon } from "./icons/facebook-icon";
 import { HamburgerMenuIcon } from "./icons/hamburger-menu-icon";
+import { InstagramIcon } from "./icons/instagram-icon";
 import { SpinnerIcon } from "./icons/spinner-icon";
+import { StarIcon } from "./icons/star";
+import { TwitterIcon } from "./icons/twitter-icon";
+import { WebsiteIcon } from "./icons/website-icon";
 
 const icons = {
   galleryVerticalEnd: GalleryHorizontalEndIcon,
@@ -21,6 +25,12 @@ const icons = {
   FileQuestion: FileQuestionIcon,
   close: XIcon,
   hamburgerMenu: HamburgerMenuIcon,
+  star: StarIcon,
+  play: CirclePlayIcon,
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  twitter: TwitterIcon,
+  website: WebsiteIcon,
 } as const;
 
 export type IconProps = Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>;
@@ -37,7 +47,7 @@ const Icon: React.FC<{
 }> = ({ type, className, style }) => {
   const IconComponent = icons[type];
 
-  return <IconComponent className={cn("size-4", className)} style={style} />;
+  return <IconComponent className={className} style={style} />;
 };
 
 export { Icon };
