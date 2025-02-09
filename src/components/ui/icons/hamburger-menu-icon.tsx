@@ -1,6 +1,7 @@
+import { cn } from "@/lib/utils";
 import type { IconProps } from "../icons";
 
-export const HamburgerMenuIcon = (props: IconProps) => (
+export const HamburgerMenuIcon = ({ className, ...props }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -8,6 +9,7 @@ export const HamburgerMenuIcon = (props: IconProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     stroke="currentColor"
+    className={cn("size-4", className)}
     {...props}
   >
     <path

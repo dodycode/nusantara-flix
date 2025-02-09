@@ -41,7 +41,7 @@ const ButtonContent = ({
   | "leftIconClassName"
   | "rightIconClassName"
 >) => (
-  <>
+  <div className="flex items-center gap-2">
     {LeftIcon && !isLoading ? (
       <Icon type={LeftIcon} className={cn("size-4", leftIconClassName)} />
     ) : null}
@@ -56,7 +56,7 @@ const ButtonContent = ({
         className={cn("size-4", { "ml-2": !!children }, rightIconClassName)}
       />
     ) : null}
-  </>
+  </div>
 );
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

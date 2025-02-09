@@ -5,15 +5,11 @@ export interface NavItem {
 
 export const navItems = [
   {
-    href: "/posts",
-    title: "Posts",
+    href: "/movies",
+    title: "Movies",
   },
   {
-    href: "#",
-    title: "Second Link",
-  },
-  {
-    href: "#",
-    title: "Third Link",
+    href: "/tv",
+    title: "TV Shows",
   },
 ] as const satisfies NavItem[];
