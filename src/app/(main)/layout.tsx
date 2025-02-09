@@ -1,3 +1,4 @@
+import { Footer } from "./_components/footer";
 import { Nav } from "./_components/nav";
 
 type Props = {
@@ -8,7 +9,10 @@ export default function MainLayout({ children }: Props) {
   return (
     <div className="flex h-screen flex-col overflow-hidden font-sans">
       <Nav />
-      <div className="h-full flex-1 overflow-y-auto">{children}</div>
+      <div className="h-full flex-1 overflow-y-auto">
+        {children}
+        <Footer />
+      </div>
     </div>
   );
 }
