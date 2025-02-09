@@ -10,7 +10,7 @@ const PeopleInfo: React.FC = () => {
           <div className="relative h-[500px] w-76">
             <Image
               src="https://image.tmdb.org/t/p/w500/yyzmRqjwwU05ROhxJ1VBQox4yIX.jpg"
-              alt="Actor"
+              alt="Actors"
               className="person-photo object-cover transition duration-150 ease-in-out hover:opacity-75"
               fill
             />
