@@ -1,11 +1,12 @@
 import Image from "next/image";
 
 import { Icon } from "@/components/ui/icons";
+import Link from "next/link";
 
 const MovieCard: React.FC = () => {
   return (
     <div className="mt-8">
-      <a href="/movies/1">
+      <Link href="/movies/1">
         <Image
           src="https://image.tmdb.org/t/p/w500/1QdXdRYfktUSONkl1oD5gc6Be0s.jpg"
           alt="Movie Poster"
@@ -14,7 +15,7 @@ const MovieCard: React.FC = () => {
           height={300}
           priority
         />
-      </a>
+      </Link>
       <div className="mt-2">
         <a href="/movies/1" className="mt-2 text-lg hover:text-gray-300">
           The Astronot
