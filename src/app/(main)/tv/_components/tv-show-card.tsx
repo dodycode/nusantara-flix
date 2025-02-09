@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Icon } from "@/components/ui/icons";
 
 const TVShowCard: React.FC = () => {
   return (
     <div className="mt-8">
-      <a href="/tv/1">
+      <Link href="/tv/1">
         <Image
           src="https://image.tmdb.org/t/p/w300/hP9bsI2B7HONwDrzoNw5Q3QJMqU.jpg"
           alt="TV Show Poster"
@@ -14,7 +15,7 @@ const TVShowCard: React.FC = () => {
           height={300}
           priority
         />
-      </a>
+      </Link>
       <div className="mt-2">
         <a href="/tv/1" className="mt-2 text-lg hover:text-gray-300">
           The Caribean

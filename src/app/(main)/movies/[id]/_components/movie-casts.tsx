@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const MovieCasts: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const MovieCasts: React.FC = () => {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {Array.from({ length: 5 }).map((_, index) => (
             <div key={index} className="mt-8">
-              <a href="/people/1">
+              <Link href="/people/1">
                 <div className="relative h-[300px] w-full">
                   <Image
                     src="https://image.tmdb.org/t/p/w300/3h5Cfm0X8ohWn7psZkqdNWqXAHH.jpg"
@@ -17,14 +18,14 @@ const MovieCasts: React.FC = () => {
                     fill
                   />
                 </div>
-              </a>
+              </Link>
               <div className="mt-2">
-                <a
+                <Link
                   href="/people/1"
                   className="hover:text-gray:300 mt-2 text-lg"
                 >
                   Sarah
-                </a>
+                </Link>
                 <div className="text-sm text-gray-400">Actor</div>
               </div>
             </div>

@@ -9,11 +9,11 @@ const Nav: React.FC = () => {
       <div className="container mx-auto flex flex-col items-center justify-between px-4 py-6 md:flex-row">
         <ul className="flex flex-col items-center md:flex-row">
           <li>
-            <a href="/" className="flex items-center text-xl font-bold">
+            <Link href="/" className="flex items-center text-xl font-bold">
               <span className="text-white">
                 <span className="text-red-600">Nusan</span>tara Flix
               </span>
-            </a>
+            </Link>
           </li>
           {navItems.map((item, index) => (
             <li

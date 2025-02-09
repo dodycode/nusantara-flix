@@ -9,8 +9,6 @@ import {
   XIcon,
 } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-
 import { FacebookIcon } from "./icons/facebook-icon";
 import { HamburgerMenuIcon } from "./icons/hamburger-menu-icon";
 import { InstagramIcon } from "./icons/instagram-icon";
