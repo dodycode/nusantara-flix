@@ -1,16 +1,16 @@
 import "server-only";
 
+import type { DiscoverAPIInput } from "@/validators/tmdb";
 import dayjs from "@/lib/dayjs";
-import { DiscoverAPIInput } from "@/validators/tmdb";
 
+import type { DiscoverMovieResponse } from "./types/discover-movie";
+import type { DiscoverTVShowsResponse } from "./types/discover-tv-show";
 import {
   MoviesGenresEnum,
   MoviesSortByEnum,
   TVShowsGenresEnum,
   TVShowsSortByEnum,
 } from "./enums";
-import { DiscoverMovieResponse } from "./types/discover-movie";
-import { DiscoverTVShowsResponse } from "./types/discover-tv-show";
 import { fetchAPI, getDefaultFilters } from "./utils";
 
 class TMDBApiService {

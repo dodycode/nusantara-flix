@@ -22,11 +22,6 @@ export const fetchAPI = async (url: string) => {
     },
   });
 
-  if (!response.ok) {
-    const errorData = await response.json();
-    throw errorData;
-  }
-
   return response;
 };
 
