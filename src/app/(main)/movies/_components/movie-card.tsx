@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Icon } from "@/components/ui/icons";
-import Link from "next/link";
 
 const MovieCard: React.FC = () => {
   return (
@@ -17,9 +17,9 @@ const MovieCard: React.FC = () => {
         />
       </Link>
       <div className="mt-2">
-        <a href="/movies/1" className="mt-2 text-lg hover:text-gray-300">
+        <Link href="/movies/1" className="mt-2 text-lg hover:text-gray-300">
           The Astronot
-        </a>
+        </Link>
         <div className="mt-1 flex items-center text-sm text-gray-400">
           <Icon type="star" />
           <span className="ml-1">6.5</span>
