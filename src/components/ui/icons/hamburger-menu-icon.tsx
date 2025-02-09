@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+
 import type { IconProps } from "../icons";
 
 export const HamburgerMenuIcon = ({ className, ...props }: IconProps) => (
