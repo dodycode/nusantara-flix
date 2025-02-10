@@ -15,16 +15,14 @@ const MovieCasts: React.FC<Props> = ({ casts }) => {
         <h2 className="text-4xl font-semibold">Cast</h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {casts.map((cast) => {
-            const profilePath = cast.profile_path
-              ? `https://image.tmdb.org/t/p/w300${cast.profile_path}`
-              : "https://placehold.co/300x450.png";
+            if (!cast.profile_path) return;
 
             return (
               <div key={cast.id} className="mt-8">
                 <Link href={`people/${cast.id}`}>
                   <div className="relative h-[300px] w-full">
                     <CldImage
-                      src={profilePath}
+                      src={`https://image.tmdb.org/t/p/w300${cast.profile_path}`}
                       alt={`${cast.name}`}
                       className="person-photo object-cover transition duration-150 ease-in-out hover:opacity-75"
                       sizes="300px"

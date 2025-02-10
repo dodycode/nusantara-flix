@@ -1,6 +1,6 @@
 import type { MovieDetails } from "@/server/api/routers/tmdb/types/movie-details";
 import CldImage from "@/components/cld-image";
-import { Button } from "@/components/ui/button";
+import { FullscreenVideo } from "@/components/fullscreen-video";
 import { Icon } from "@/components/ui/icons";
 import dayjs from "@/lib/dayjs";
 
@@ -56,11 +56,15 @@ const MovieInfo: React.FC<Props> = ({ movie }) => {
             </div>
           </div>
 
-          {movie.videos.results.length > 0 ? (
+          {movie.videos.results.length > 0 &&
+          movie.videos.results[0]?.site &&
+          movie.videos.results[0]?.key ? (
             <div className="mt-12">
-              <Button LeftIcon="play" size="lg">
-                Watch Trailer
-              </Button>
+              <FullscreenVideo
+                urlSite={movie.videos.results[0].site}
+                url={movie.videos.results[0].key}
+                btnText="Play Trailer"
+              />
             </div>
           ) : null}
         </div>

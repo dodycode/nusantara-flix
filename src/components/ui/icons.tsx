@@ -1,6 +1,8 @@
 import type { LucideProps } from "lucide-react";
 import type { ForwardRefExoticComponent, RefAttributes } from "react";
 import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
   CirclePlayIcon,
   FileQuestionIcon,
   FileTextIcon,
@@ -31,6 +33,8 @@ const icons = {
   instagram: InstagramIcon,
   twitter: TwitterIcon,
   website: WebsiteIcon,
+  arrowLeft: ArrowLeftIcon,
+  arrowRight: ArrowRightIcon,
 } as const;
 
 export type IconProps = Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>;
