@@ -11,6 +11,7 @@ import {
   TVShowsGenresEnum,
   TVShowsSortByEnum,
 } from "./enums";
+import { MovieDetails } from "./types/movie-details";
 import { fetchAPI, getDefaultFilters } from "./utils";
 
 class TMDBApiService {
@@ -108,6 +109,15 @@ class TMDBApiService {
 
     const res = await fetchAPI(`/discover/tv?${filters.join("&")}`);
     const resJson = (await res.json()) as DiscoverTVShowsResponse;
+
+    return resJson;
+  }
+
+  public async movieDetails(id: MovieDetails["id"]) {
+    const res = await fetchAPI(
+      `/movie/${id}?append_to_response=credits,videos,images`,
+    );
+    const resJson = (await res.json()) as MovieDetails;
 
     return resJson;
   }

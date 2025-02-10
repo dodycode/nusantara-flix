@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
 import { DiscoverAPISchema } from "@/validators/tmdb";
 
@@ -16,4 +18,8 @@ export const tmdbRouter = createTRPCRouter({
       const response = await tmdbAPIService.discoverTVShows(input);
       return response;
     }),
+  movieDetails: publicProcedure.input(z.number()).query(async ({ input }) => {
+    const response = await tmdbAPIService.movieDetails(input);
+    return response;
+  }),
 });

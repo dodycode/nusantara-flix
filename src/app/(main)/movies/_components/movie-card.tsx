@@ -11,6 +11,10 @@ type Props = {
 };
 
 const MovieCard: React.FC<Props> = ({ movie }) => {
+  const posterPath = movie.poster_path
+    ? `https://image.tmdb.org/t/p/w400${movie.poster_path}`
+    : "https://placehold.co/400x350.png";
+
   const genresSet = new Set(movie.genre_ids);
 
   const filteredGenres = moviesGenresArray.filter((genre) =>
@@ -22,7 +26,7 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
       <Link href={`movies/${movie.id}`}>
         <div className="relative h-[350px] w-full overflow-hidden">
           <CldImage
-            src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+            src={posterPath}
             alt={`${movie.title} poster`}
             className="thumbnail object-cover transition duration-150 ease-in-out hover:opacity-75"
             sizes="400px"

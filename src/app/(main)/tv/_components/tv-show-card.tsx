@@ -11,6 +11,10 @@ type Props = {
 };
 
 const TVShowCard: React.FC<Props> = ({ show }) => {
+  const posterPath = show.poster_path
+    ? `https://image.tmdb.org/t/p/w400${show.poster_path}`
+    : "https://placehold.co/400x350.png";
+
   const genresSet = new Set(show.genre_ids);
 
   const filteredGenres = tvShowsGenresArray.filter((genre) =>
@@ -22,7 +26,7 @@ const TVShowCard: React.FC<Props> = ({ show }) => {
       <Link href={`tv/${show.id}`}>
         <div className="relative h-[350px] w-full overflow-hidden">
           <CldImage
-            src={`https://image.tmdb.org/t/p/w400${show.poster_path}`}
+            src={posterPath}
             alt={`${show.name} poster`}
             className="thumbnail object-cover transition duration-150 ease-in-out hover:opacity-75"
             sizes="400px"
